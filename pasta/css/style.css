@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    box-sizing: border-box ;
+}
+
+
+.menu-principal ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 45px;
+    padding: 0 5px;
+    border: 1px solid;
+}
+
+.menu-principal ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 15%;
+    height: 70%;
+    font-size: 1.3em;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+
+.container-formulario{
+    display: flex;
+    justify-content: center;
+   background-color: red;
+    border: 1px solid;
+    padding: 5px;
+    margin-top: 25px;
+}
+
+.container-formulario .codigo .produto{
+    width: 150px;
+}
+.container-formulario .quantidade{
+    width: 100px;
+}
+.container-formulario .valor{
+    width: 100px;
+}
+.container-formulario .desconto{
+    width: 100px;
+}
+
+/*Icone*/
+
+.fa-angle-double-right{
+   margin: 3px;
+   font-size: 1em;
+}
