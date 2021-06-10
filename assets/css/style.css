@@ -4,6 +4,7 @@
 }
 
 
+
 .menu-principal ul{
     display: flex;
     flex-direction: row;
@@ -30,7 +31,7 @@
 
 .container-formulario{
     display: block;
-    width: 25%;
+    width: 30%;
     background-color: rgb(238, 235, 235);
     border: 1px solid;
     padding: 5px;
@@ -40,18 +41,18 @@
 
 .container-formulario .codigo .produto{
     margin-top: 10px;
-    width: 120px;
+    width: 100px;
 }
 .container-formulario .quantidade{
-    width: 120px;
+    width: 100px;
     margin-top: 10px;
 }
 .container-formulario .valor{
-    width: 120px;
+    width: 100px;
     margin-top: 10px;
 }
 .container-formulario .desconto{
-    width: 120px;
+    width: 100px;
     margin-top: 10px;
 }
 
