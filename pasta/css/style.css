@@ -29,25 +29,38 @@
 
 
 .container-formulario{
-    display: flex;
-    justify-content: center;
-   background-color: red;
+    display: block;
+    width: 25%;
+    background-color: rgb(238, 235, 235);
     border: 1px solid;
     padding: 5px;
+    margin: 15px;
     margin-top: 25px;
 }
 
 .container-formulario .codigo .produto{
-    width: 150px;
+    margin-top: 10px;
+    width: 120px;
 }
 .container-formulario .quantidade{
-    width: 100px;
+    width: 120px;
+    margin-top: 10px;
 }
 .container-formulario .valor{
-    width: 100px;
+    width: 120px;
+    margin-top: 10px;
 }
 .container-formulario .desconto{
-    width: 100px;
+    width: 120px;
+    margin-top: 10px;
+}
+
+textarea{
+    margin-top: 10px;
+}
+
+button{
+    margin-top: 10px;
 }
 
 /*Icone*/
