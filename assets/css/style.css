@@ -2,6 +2,7 @@
     margin: 0;
     
 }
+/*Parte do menu principal*/
 
 .menu-principal ul{
     display: flex;
@@ -23,10 +24,15 @@
     font-size: 1em;
 }
 
+.menu-principal ul li a{
+    text-decoration: none;
+}
+
 /*-------------------------------------------------------------------------------*/
 
+/**/
 
-
+/*
 .container-formulario .codigo .produto{
     margin-top: 10px;
     width: 100px;
@@ -51,10 +57,11 @@ textarea{
 button{
     margin-top: 10px;
 }
-
+*/
 /*Icone*/
-
+/*
 .fa-angle-double-right{
    margin: 3px;
    font-size: 1em;
 }
+*/

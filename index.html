@@ -18,32 +18,38 @@
     <!--menu com opções-->
     <header class="menu-principal">
         <ul class="opcoes-menu">
-            <li>Quem somos</li>
-            <li>Orçamento</li>
-            <li>Pedidos</li>
-            <li>Contato</li>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Orçamento</a></li>
+            <li><a href="#">Pedidos</a></li>
+            <li><a href="#">Contato</a></li>
         </ul>
     </header>
 
     <main class="form-item">
         <form class="container-formulario">
-            <p>Código: <input type="text" name="codigo" class="codigo"><button class="botao"><i
-                        class="fas fa-angle-double-right"></i></button></p>
-            <p>Produto: <textarea name="produto" class="produto" cols="25" rows="1"></textarea></p>
-            <p>Quantidade: <input type="text" name="quantidade" class="quantidade"></p>
-            <p>Valor: <textarea name="valor" id="" cols="25" rows="1" class="valor"></textarea></p>
-            <p>Desconto: <input type="text" name="desconto" class="desconto"><button class="botao2"><i
-                        class="fas fa-angle-double-right"></i></button></p>
-            <p>Subtotal: <textarea name="valor" id="" cols="25" rows="1" class="subtotal"></textarea></p>
+            <label for="codigo">Código:</label>
+            <input type="text" name="codigo" class="codigo">
+            <button class="botao"><i class="fas fa-angle-double-right"></i></button>
+            <label for="peoduto">Produto:</label>
+            <textarea name="produto" class="produto" cols="25" rows="1"></textarea>
+            <label for="quantidade">Quantidade:</label>
+            <input type="text" name="quantidade" class="quantidade">
+            <label for="valor">Valor:</label>
+            <textarea name="valor" id="" cols="25" rows="1" class="valor"></textarea>
+            <label for="desconto">Desconto:</label>
+            <input type="text" name="desconto" class="desconto">
+            <button class="botao2"><i class="fas fa-angle-double-right"></i></button>
+            <label for="subtotal">Subtotal:</label>
+            <textarea name="valor" id="" cols="25" rows="1" class="subtotal"></textarea>
             <button class="botao2">incluir</button>
         </form>
 
         <section class="container-img">
-            
+
         </section>
 
         <aside class="container-orcamento">
-           
+
         </aside>
     </main>
 
