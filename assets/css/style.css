@@ -1,7 +1,12 @@
+/*Fontes google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2? family = Heebo: wght @ 300 & display = swap');
+
+
 *{
     margin: 0;
-    
 }
+
 /*Parte do menu principal*/
 
 .menu-principal ul{
@@ -28,9 +33,56 @@
     text-decoration: none;
 }
 
-/*-------------------------------------------------------------------------------*/
+/*Parte do formulário de inclusão de itens.*/
 
-/**/
+.container-formulario{
+    display: grid;
+    padding: 3px;
+}
+
+.container-formulario label{
+    font-family: 'Staatliches', cursive;
+    padding: 3px;
+    margin-bottom: -12px;
+    font-size: 1.3rem;
+}
+
+.container-formulario input{
+    font-family: 'Heebo', sans-serif;
+    width: 85%;
+    height: 25px;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.container-formulario textarea{
+    font-family: 'Heebo', sans-serif;
+    width: 85%;
+    height: 25px;
+    font-size: 1.2em;
+    padding: 3px;
+}
+
+/*Seção dos botoes*/
+
+.container-formulario .botao-codigo{
+    width: 60px;
+    margin-top: -8px;
+    margin-bottom: 3px;
+}
+
+.container-formulario .botao-calcular{
+    font-size: .7em;
+    width: 100px;
+    height: 30px;
+}
+
+.container-formulario .botao-incluir{
+    font-size: .7em;
+    width: 100px;
+    height: 30px;
+}
+
 
 /*
 .container-formulario .codigo .produto{

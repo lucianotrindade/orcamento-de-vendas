@@ -1,10 +1,10 @@
 const codigo = document.querySelector('.codigo');
-const botao1 = document.querySelector('.botao');
+const botaoCodigo = document.querySelector('.botao-codigo');
 const quantidade = document.querySelector('.quantidade');
 const descricao = document.querySelector('.produto');
 const valor = document.querySelector('.valor');
 const desconto = document.querySelector('.desconto');
-const botao2 = document.querySelector('.botao2');
+const botaoCalcular = document.querySelector('.botao-calcular');
 const sub = document.querySelector('.subtotal');
 
 
@@ -50,7 +50,7 @@ function subTotal(cod1){
 
 
 
-botao1.addEventListener('click', function (e){
+botaoCodigo.addEventListener('click', function (e){
     e.preventDefault();
 
    incluiProduto(codigo.value);
@@ -59,7 +59,7 @@ botao1.addEventListener('click', function (e){
 });
 
 
-botao2.addEventListener('click', function (e){
+botaoCalcular.addEventListener('click', function (e){
     e.preventDefault();
 
   

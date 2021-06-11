@@ -2,7 +2,7 @@
     background-color: chartreuse;
     display: grid;
     width: 99.%;
-    grid-template-columns: 30vw 20vw;
+    grid-template-columns: 20vw 20vw;
     grid-template-rows: 25% 25% 25% 25%;
     column-gap: 0.2%;
     grid-template-areas: 
