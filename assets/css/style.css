@@ -8,7 +8,9 @@
 }
 
 /*Parte do menu principal*/
-
+.menu-principal{
+    border-bottom: 2px solid;
+}
 .menu-principal ul{
     display: flex;
     justify-content:flex-end;
