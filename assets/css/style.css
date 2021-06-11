@@ -11,26 +11,25 @@
 
 .menu-principal ul{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content:flex-end;
     align-items: center;
-    height: 7vh;
-    padding: 0 5px;
-    
+    height: 100%;
+    padding: 0 3px;
 }
 
 .menu-principal ul li{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid;
-    width: 15%;
-    height: 70%;
-    font-size: 1em;
+    width: 10%;
+    height: 60%;
+    font-size: 1.2em;
+    font-family: 'Staatliches', cursive;
 }
 
 .menu-principal ul li a{
     text-decoration: none;
+    color: black;
 }
 
 /*Parte do formulário de inclusão de itens.*/
@@ -83,37 +82,3 @@
     height: 30px;
 }
 
-
-/*
-.container-formulario .codigo .produto{
-    margin-top: 10px;
-    width: 100px;
-}
-.container-formulario .quantidade{
-    width: 100px;
-    margin-top: 10px;
-}
-.container-formulario .valor{
-    width: 100px;
-    margin-top: 10px;
-}
-.container-formulario .desconto{
-    width: 100px;
-    margin-top: 10px;
-}
-
-textarea{
-    margin-top: 10px;
-}
-
-button{
-    margin-top: 10px;
-}
-*/
-/*Icone*/
-/*
-.fa-angle-double-right{
-   margin: 3px;
-   font-size: 1em;
-}
-*/
