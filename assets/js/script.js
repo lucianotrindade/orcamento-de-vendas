@@ -11,7 +11,7 @@ const sub = document.querySelector('.subtotal');
 
 const produto1 = {
     codigo: 123,
-    produto: 'Fita adesiva',
+    produto: 'Deo Parfum Far Away Royale',
     valor: 42.90,
     produto2: {
         codigo: 456 ,

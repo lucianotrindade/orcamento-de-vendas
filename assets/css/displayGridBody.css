@@ -9,15 +9,13 @@
 }
 
 .menu-principal{
-  background-color: red;
-  grid-area: menu-principal;
+   grid-area: menu-principal;
 }
 .form-item{
- background-color: aqua;
- grid-area: form-item;
+    grid-area: form-item;
 }
 
 .container-contatos{
-    background-color: cadetblue;
+   
     grid-area: container-contatos;
 }

@@ -1,5 +1,4 @@
 .form-item{
-    background-color: chartreuse;
     display: grid;
     width: 99.%;
     grid-template-columns: 20vw 20vw;
@@ -16,7 +15,7 @@
     grid-area: container-formulario;
     grid-column-start: 1;
     grid-row-end: 5;
-    background-color: red;
+   
 
 }
 .container-img{
@@ -24,14 +23,17 @@
     grid-row-start: 1;
     grid-column-start: 2;
     grid-row-end: 1;
-    background-color: rgb(192, 147, 147);
+    
 }
 
 .container-orcamento{
+    background-color: rgb(255, 254, 254, 0.4);
+    border: 3px solid white;
+    border-radius: 7px;
     grid-area: container-orcamento;
     grid-column-start: 2;
     grid-row-start: 2;
     grid-row-end: 5;
     grid-column-end:4 ;
-    background-color: rgb(114, 35, 35);
+   
 }
