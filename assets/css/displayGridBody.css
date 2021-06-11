@@ -1,0 +1,23 @@
+.pai{
+    display: grid;
+    grid-template-areas:
+        "menu-principal"
+        "form-item"
+        "container-contatos";
+    grid-template-columns: auto;
+    grid-template-rows: 7vh 85vh 8vh ;    
+}
+
+.menu-principal{
+  background-color: red;
+  grid-area: menu-principal;
+}
+.form-item{
+ background-color: aqua;
+ grid-area: form-item;
+}
+
+.container-contatos{
+    background-color: cadetblue;
+    grid-area: container-contatos;
+}

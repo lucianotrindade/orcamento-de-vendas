@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orçamento de vendas</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/displayGridBody.css">
+    <link rel="stylesheet" href="./assets/css/displayGridDestaques.css">
 </head>
-<body>
+
+<body class="pai">
 
     <!--menu com opções-->
     <header class="menu-principal">
@@ -19,30 +23,35 @@
             <li>Pedidos</li>
             <li>Contato</li>
         </ul>
-    </header>   
-    
-    <section class="form-item">
-    <form class="container-formulario">
-       <p>Código: <input type="text" name="codigo" class="codigo"><button class="botao"><i class="fas fa-angle-double-right"></i></button></p> 
-       <p>Produto: <textarea name="produto" class="produto" cols="25" rows="1"></textarea></p>
-       <p>Quantidade: <input type="text" name="quantidade" class="quantidade"></p> </p> 
-       <p>Valor: <textarea name="valor" id="" cols="25" rows="1" class="valor"></textarea></p> 
-       <p>Desconto: <input type="text" name="desconto" class="desconto"><button class="botao2"><i class="fas fa-angle-double-right"></i></button></p> 
-       <p>Subtotal: <textarea name="valor" id="" cols="25" rows="1" class="subtotal"></textarea></p> 
-       <button class="botao2">incluir</button>
-    </form>
-    </section>
-    
-    <aside class="container-orcamento">
+    </header>
 
-    </aside>
+    <main class="form-item">
+        <form class="container-formulario">
+            <p>Código: <input type="text" name="codigo" class="codigo"><button class="botao"><i
+                        class="fas fa-angle-double-right"></i></button></p>
+            <p>Produto: <textarea name="produto" class="produto" cols="25" rows="1"></textarea></p>
+            <p>Quantidade: <input type="text" name="quantidade" class="quantidade"></p>
+            <p>Valor: <textarea name="valor" id="" cols="25" rows="1" class="valor"></textarea></p>
+            <p>Desconto: <input type="text" name="desconto" class="desconto"><button class="botao2"><i
+                        class="fas fa-angle-double-right"></i></button></p>
+            <p>Subtotal: <textarea name="valor" id="" cols="25" rows="1" class="subtotal"></textarea></p>
+            <button class="botao2">incluir</button>
+        </form>
+
+        <section class="container-img">
+            
+        </section>
+
+        <aside class="container-orcamento">
+           
+        </aside>
+    </main>
 
     <footer class="container-contatos">
-        
-    </footer>
-    <section>
         <h1>TESTANDO</h1>
-    </section>
+    </footer>
+
     <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

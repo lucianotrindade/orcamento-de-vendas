@@ -1,0 +1,37 @@
+.form-item{
+    background-color: chartreuse;
+    display: grid;
+    width: 99.%;
+    grid-template-columns: 30vw 20vw;
+    grid-template-rows: 25% 25% 25% 25%;
+    column-gap: 0.2%;
+    grid-template-areas: 
+    "container-formulario"
+    "container-img"
+    "container-orcamento";
+    margin: 5px;
+}
+
+.container-formulario{
+    grid-area: container-formulario;
+    grid-column-start: 1;
+    grid-row-end: 5;
+    background-color: red;
+
+}
+.container-img{
+    grid-area: container-img;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 1;
+    background-color: rgb(192, 147, 147);
+}
+
+.container-orcamento{
+    grid-area: container-orcamento;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    grid-column-end:4 ;
+    background-color: rgb(114, 35, 35);
+}
