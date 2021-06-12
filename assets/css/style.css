@@ -10,6 +10,7 @@
 *{
     margin: 0;
 }
+
 body{
     background: linear-gradient(#b9e1ed , #50889c);
     background-repeat: no-repeat;
@@ -17,7 +18,9 @@ body{
 
 /*Parte do menu principal*/
 .menu-principal{
-    border-bottom: 2px solid white;
+    background-color: rgb(255, 254, 254, 0.4);
+    border: 2px solid white;
+    border-radius: 7px;
 }
 .menu-principal ul{
     display: flex;
@@ -38,8 +41,17 @@ body{
 }
 
 .menu-principal ul li a{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
-    color:white;
+    width: 70%;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    border-radius: 7px;
+}
+
+.menu-principal ul li a:hover{
+     background-color: #a9d7e6;
 }
 
 /*Parte do formulário de inclusão de itens.*/
@@ -105,16 +117,97 @@ body{
     border: 3px solid white;  
     width: 100%;
     text-align: center;
-    
-    
-
 }
+
 .container-img img{
     height: 100%;
 }
-
 /*Parte da Tabela*/
 
-.container-tabela{
-    
+table{
+    width: 100%;
+}
+.container-tabela td{
+    background-color: rgb(255, 254, 254, 0.4);
+    border-bottom: 3px solid white;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.container-tabela .produto{
+    width: 45%;
+}
+
+.container-tabela .opcoes{
+    width: 10%;
+}
+
+.container-tabela .unitario{
+    width: 12%;
+}
+
+/* Exemplo dos icones ==========================================================*/
+
+.fa-times{
+    display: flex;
+    justify-content: center;
+    color: red;
+}
+
+.container-item a{
+    text-decoration: none;
+}
+
+/*Parte do rdapé ==============================================================*/
+.container-contatos{
+    background-color: rgb(255, 254, 254, 0.3);
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid white;
+    border-radius: 7px;
+   
+}
+.container-valida{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 20%;
+    height: 90%;
+}
+
+.container-valida form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.container-valida button{
+    width: 45%;
+    height: 80%;
+    margin-left: 3%;
+}
+
+.container-valida .confirmar{
+    background-color: darkgreen;
+    color: white;
+    border: 2px solid;
+    border-radius: 7px;
+}
+
+.container-valida .cancelar{
+    background-color: red;
+    color: white;
+    border: 2px solid;
+    border-radius: 7px;
+}
+
+/* */
+.feito-por{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    font-size: .8em;
+    margin: 3px;
 }
