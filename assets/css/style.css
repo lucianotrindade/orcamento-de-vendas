@@ -16,7 +16,7 @@ body{
     background-repeat: no-repeat;
 }
 
-/*Parte do menu principal*/
+/*Parte do menu principal ========================================================*/
 .menu-principal{
     background-color: rgb(255, 254, 254, 0.4);
     border: 2px solid white;
@@ -54,7 +54,7 @@ body{
      background-color: #a9d7e6;
 }
 
-/*Parte do formulário de inclusão de itens.*/
+/*Parte do formulário de inclusão de itens. ======================================*/
 
 .container-formulario{
     background-color: rgb(255, 254, 254, 0.4);
@@ -69,50 +69,76 @@ body{
     padding: 3px;
     margin-bottom: -12px;
     font-size: 1.3rem;
+    border: none;
 }
 
 .container-formulario input{
+    background-color: rgb(255, 254, 254, 0.6);
     font-family: 'Heebo', sans-serif;
     width: 85%;
     height: 25px;
     align-items: center;
     font-size: 1.1em;
+    border: none;
+    border-bottom: 5px solid white;
+    border-radius: 7px;
+    outline: none;
 }
 
 .container-formulario textarea{
+    background-color: rgb(255, 254, 254, 0.6);
     box-sizing:content-box;
     font-family: 'Heebo', sans-serif;
     width: 85%;
     height: 25px;
     font-size: 1.2em;
     padding: 3px;
-    border: 1px solid;
+    border: none;
+    border-bottom: 5px solid white;
+    border-radius: 7px;
+    outline: none;
+    
+    
 }
 
-/*Seção dos botoes*/
+/*Seção dos botoes ===============================================================*/
 
 .container-formulario .botao-codigo{
+    background-color: rgb(255, 254, 254, 0.9);
     width: 60px;
-    margin-top: -8px;
+    margin-top: 3px;
     margin-bottom: 3px;
+    border: none;
+    border-radius: 7px;
+    
+}
+
+.container-formulario .fa-search{
+    color: rgb(77, 73, 73);
 }
 
 .container-formulario .botao-calcular{
-    font-size: .7em;
+    background-color: rgb(255, 254, 254, 1);
+    font-size: .8em;
     width: 100px;
     height: 30px;
+    border: none;
+    border-radius: 7px;
 }
 
 .container-formulario .botao-incluir{
-    font-size: .7em;
+    background-color: rgb(255, 254, 254, 0.5);
+    font-size: .8em;
     width: 100px;
     height: 30px;
+    border: none;
+    border-radius: 7px;
 }
 
-/*Parte da imagem*/
+/*Parte da imagem =============================================================*/
 
 .container-img{
-    background-color: rgb(255, 254, 254, 0.4);
+    background-color: rgb(255, 254, 254, 0.5);
     border-radius: 7px;
     border: 3px solid white;  
     width: 100%;
@@ -122,7 +148,7 @@ body{
 .container-img img{
     height: 100%;
 }
-/*Parte da Tabela*/
+/*Parte da Tabela ===============================================================*/
 
 table{
     width: 100%;
@@ -203,7 +229,7 @@ table{
     border-radius: 7px;
 }
 
-/* */
+/* Desenvolvido por =============================================================*/
 .feito-por{
     display: flex;
     align-items: center;
