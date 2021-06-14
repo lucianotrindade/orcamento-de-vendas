@@ -50,6 +50,7 @@ body{
     border-bottom: 2px solid white;
     border-left: 2px solid white;
     border-radius: 7px;
+    color: black;
 }
 
 .menu-principal ul li a:hover{
@@ -59,7 +60,7 @@ body{
 /*Parte do formulário de inclusão de itens. ======================================*/
 
 .container-formulario{
-    background-color: rgb(255, 254, 254, 0.4);
+    background-color: rgba(27, 28, 65, 0.5);
     display: grid;
     border-radius: 7px;
     border: 3px solid white;
@@ -80,7 +81,7 @@ body{
     width: 85%;
     height: 25px;
     align-items: center;
-    font-size: 1.1em;
+    font-size: 1.3em;
     border: none;
     border-bottom: 5px solid white;
     border-radius: 7px;
@@ -93,15 +94,21 @@ body{
     font-family: 'Vidaloka', serif;
     width: 85%;
     height: 25px;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 3px;
     border: none;
     border-bottom: 5px solid white;
     border-radius: 7px;
     outline: none;
-    
-    
 }
+.container-formulario .valor {
+    font-size: 1.5em;
+}
+
+.container-formulario .subtotal{
+    font-size: 1.5em;
+}
+
 
 /*Seção dos botoes ===============================================================*/
 
