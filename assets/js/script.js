@@ -86,7 +86,7 @@ botaoConsultar.addEventListener('click', function (e) {
 
 botaoCalcular.addEventListener('click', function (e) {
     e.preventDefault();
-    if (!quantidade.value || !desconto.value) alert("ok");
+    if (!quantidade.value || !desconto.value) alert("Prencher quantidade e desconto!");
 
     calculaSubtotal(preco.value, desconto.value, quantidade.value);
   
