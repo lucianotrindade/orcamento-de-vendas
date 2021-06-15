@@ -1,6 +1,5 @@
 /*Fontes google fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-@import url('https://fonts.googleapis.com/css2? family = Heebo: wght @ 300 & display = swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Vidaloka&display=swap');
 
@@ -112,7 +111,7 @@ body{
 
 /*Seção dos botoes ===============================================================*/
 
-.container-formulario .botao-codigo{
+.container-formulario .botao-consultar{
     background-color: rgb(255, 254, 254, 0.9);
     width: 60px;
     margin-top: 3px;
