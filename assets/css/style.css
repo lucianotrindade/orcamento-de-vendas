@@ -126,7 +126,7 @@ body{
 }
 
 .container-formulario .botao-calcular{
-    background-color: rgb(255, 254, 254, 1);
+    background-color: rgb(255, 254, 254, 0.5);
     font-size: .8em;
     width: 100px;
     height: 30px;
