@@ -106,9 +106,9 @@ function criaTabela() {
 
 function tabelaOrcamento() {
     const td = criaTr();
-    tabelas.appendChild(td);    
+    tabelas.appendChild(td);
 
-    for(let i = 0; i < dados.length; i++) {
+    for (let i = 0; i < dados.length; i++) {
         const tab = criaTabela();
         tab.innerHTML = dados[i];
         td.appendChild(tab);
