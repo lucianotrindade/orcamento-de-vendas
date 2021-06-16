@@ -1,10 +1,10 @@
-const codigo = document.querySelector('.codigo');
-const botaoConsultar = document.querySelector('.botao-consultar');
+let codigo = document.querySelector('.codigo');
+let botaoConsultar = document.querySelector('.botao-consultar');
 const descricao = document.querySelector('.produto');
-const preco = document.querySelector('.valor')
-const quantidade = document.querySelector('.quantidade');
-const desconto = document.querySelector('.desconto');
-const botaoCalcular = document.querySelector('.botao-calcular');
+let preco = document.querySelector('.valor')
+let quantidade = document.querySelector('.quantidade');
+let desconto = document.querySelector('.desconto');
+let botaoCalcular = document.querySelector('.botao-calcular');
 const sub = document.querySelector('.subtotal');
 const incluir = document.querySelector('.botao-incluir');
 const tabelas = document.querySelector('.tabelas');
@@ -84,6 +84,13 @@ function calculaSubtotal(valor, desc, qtda) {
 /*Recebe os dados do formulário para depois incluir no campo de orçamento */
 let dados = [];
 
+/*Limpa a lista de array existente para nova inclusão ============================*/
+function limpaArray(){
+    for (let i = 0; i < dados.length; i++) {
+        dados.splice(i);
+    }
+}
+
 function incluirItem(cod) {
     dados.push(cod);
     console.log(dados);
@@ -115,6 +122,17 @@ function tabelaOrcamento() {
     }
 }
 
+function limpaFormulario(){
+    codigo.value = '';
+    codigo.focus();
+    descricao.innerHTML = '';
+    preco.innerHTML = '';
+    quantidade.value = '';
+    desconto.value = ' ';
+    sub.innerHTML = ' ';
+
+}
+
 
 /*Estou pegando o evento do botão de consultar item */
 botaoConsultar.addEventListener('click', function (e) {
@@ -144,11 +162,8 @@ incluir.addEventListener('click', function (e) {
     e.preventDefault();
 
     tabelaOrcamento();
-
-    /*Limpa a lista de array existente para nova inclusão */
-    for (let i = 0; i < dados.length; i++) {
-        dados.splice(i);
-    }
+    limpaArray(); 
+    limpaFormulario();
 
 });
 
