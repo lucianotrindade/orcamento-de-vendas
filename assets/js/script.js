@@ -9,6 +9,7 @@ const sub = document.querySelector('.subtotal');
 const incluir = document.querySelector('.botao-incluir');
 const tabelas = document.querySelector('.tabelas');
 
+
 /*Feito um objetos com os produtos */
 const produto1 = {
     codigo: 123,
@@ -122,6 +123,7 @@ function tabelaOrcamento() {
     }
 }
 
+/* Limpa o formulário após a inclusão do item na tabela de orçamento */
 function limpaFormulario(){
     codigo.value = '';
     codigo.focus();
@@ -133,16 +135,36 @@ function limpaFormulario(){
 
 }
 
+/* mostra imagem de acordo como o código digitado */
+
+function mostraImagem(cod){
+    const imagem1 = document.querySelector('.img-1');
+    const imagem2 = document.querySelector('.img-2');
+    const imagem3 = document.querySelector('.img-3');
+    const codigo = parseInt(cod);
+
+    if(codigo === 123){
+    imagem1.style.display = "inline-block";
+    }
+    if(codigo === 456){
+        imagem2.style.display = "inline-block";
+    }
+    if(codigo === 789){
+        imagem3.style.display = "inline-block";
+    }
+}
+
+
 
 /*Estou pegando o evento do botão de consultar item */
 botaoConsultar.addEventListener('click', function (e) {
     e.preventDefault();
     if (!codigo.value) return;
 
-    incluirItem(codigo.value)
+    incluirItem(codigo.value);
     incluiProduto(codigo.value);
+    mostraImagem(codigo.value);
 
-    console.log(codigo.value)
 });
 
 /*Pegando o evento do botão calcular */

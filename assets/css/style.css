@@ -157,6 +157,12 @@ body{
 .container-img img{
     height: 100%;
 }
+
+/*ocultando a imagem*/
+.container-img .img-1, .img-2, .img-3{
+    display: none;
+}
+
 /*Parte da Tabela ===============================================================*/
 
 table{
