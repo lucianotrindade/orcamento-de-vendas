@@ -43,19 +43,19 @@ function incluiProduto(cod) {
 
         preco.innerText = produto1.valor;
         incluirItem(produto1.produto);
-        incluirItem(produto1.valor);
+        //incluirItem(produto1.valor);
         quantidade.value = '';
         focaQuantidade();
     } else if (valor == 456) {
         descricao.innerText = produto1.produto2.produto;
         incluirItem(produto1.produto2.produto);
-        incluirItem(produto1.produto2.valor);
+        //incluirItem(produto1.produto2.valor);
         preco.innerHTML = produto1.produto2.valor;
         focaQuantidade();
     } else if (valor == 789) {
         descricao.innerText = produto1.produto3.produto;
         incluirItem(produto1.produto3.produto);
-        incluirItem(produto1.produto3.valor);
+        //incluirItem(produto1.produto3.valor);
         preco.innerText = produto1.produto3.valor;
         focaQuantidade();
     } else {
@@ -69,13 +69,17 @@ function incluiProduto(cod) {
 
 function calculaSubtotal(valor, desc, qtda) {
     const preco = valor;
-    const quantidade = qtda;
+    const quant = qtda;
     const desconto = (desc / 100);
 
     const calculaDesconto = preco - (preco * desconto);
-    const total = calculaDesconto * quantidade;
+    const total = calculaDesconto * quant;
+    incluirItem(calculaDesconto);
+    incluirItem(parseInt(quantidade.value));
+    incluirItem(total);
 
     sub.innerHTML = total;
+    
 
     return total;
 }
@@ -95,7 +99,6 @@ function limpaArray(){
 
 function incluirItem(cod) {
     dados.push(cod);
-    console.log(dados);
 }
 
 /*função que cria TR */
@@ -172,7 +175,7 @@ botaoCalcular.addEventListener('click', function (e) {
     if (!quantidade.value || !desconto.value) alert("Prencher quantidade e desconto!");
 
     calculaSubtotal(preco.value, desconto.value, quantidade.value);
-    incluirItem(parseInt(quantidade.value));
+    //incluirItem(parseInt(quantidade.value));
 
 });
 
