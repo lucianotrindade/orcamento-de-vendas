@@ -8,6 +8,7 @@ let botaoCalcular = document.querySelector('.botao-calcular');
 const sub = document.querySelector('.subtotal');
 const incluir = document.querySelector('.botao-incluir');
 const tabelas = document.querySelector('.tabelas');
+const img = document.querySelector('.fa-camera');
 
 
 /*Feito um objetos com os produtos */
@@ -141,17 +142,14 @@ function mostraImagem(cod){
     const imagem1 = document.querySelector('.img-1');
     const imagem2 = document.querySelector('.img-2');
     const imagem3 = document.querySelector('.img-3');
+    
     const codigo = parseInt(cod);
 
-    if(codigo === 123){
-    imagem1.style.display = "inline-block";
-    }
-    if(codigo === 456){
-        imagem2.style.display = "inline-block";
-    }
-    if(codigo === 789){
-        imagem3.style.display = "inline-block";
-    }
+    codigo === 123 ? imagem1.style.display = "inline-block" : imagem1.style.display = "none"; img.style.display = "inline-block" ;
+    codigo === 456 ? imagem2.style.display = "inline-block" : imagem2.style.display = "none";
+    codigo === 789 ? imagem3.style.display = "inline-block" : imagem3.style.display = "none" ;
+
+     img.style.display = "none";
 }
 
 
@@ -186,7 +184,9 @@ incluir.addEventListener('click', function (e) {
     tabelaOrcamento();
     limpaArray(); 
     limpaFormulario();
-
+    mostraImagem();
+    img.style.display = "flex";
+    
 });
 
 /*Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
