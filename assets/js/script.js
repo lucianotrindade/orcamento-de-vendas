@@ -15,11 +15,11 @@ const img = document.querySelector('.fa-camera');
 const produto1 = {
     codigo: 123,
     produto: 'DEO PARFUM FAR AWAY ROYALE',
-    valor: 42.90,
+    valor: 42.90.toFixed(2),
     produto2: {
         codigo: 456,
         produto: 'KIT RITUAL RENEW',
-        valor: 109.90,
+        valor: 109.90.toFixed(2),
     },
     produto3: {
         codigo: 789,
@@ -74,12 +74,12 @@ function calculaSubtotal(valor, desc, qtda) {
 
     const calculaDesconto = preco - (preco * desconto);
     const total = calculaDesconto * quant;
-    incluirItem(calculaDesconto);
-    incluirItem(parseInt(quantidade.value));
-    incluirItem(total);
 
-    sub.innerHTML = total;
-    
+    incluirItem(calculaDesconto.toFixed(2));
+    incluirItem(parseInt(quantidade.value));
+    incluirItem(total.toFixed(2));
+
+    sub.innerHTML = total.toFixed(2);
 
     return total;
 }
