@@ -167,6 +167,17 @@ incluir.addEventListener('click', function (e) {
 
 });
 
+/*Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
+quantidade.addEventListener('keypress', function(e){
+    if(e.keyCode === 13) e.preventDefault();
+    desconto.focus();
+});
+
+/* Estou parando o evendo do enter no campo desconto */
+desconto.addEventListener('keypress', function(e){
+    if(e.keyCode === 13) e.preventDefault();
+});
+
 
 
 
