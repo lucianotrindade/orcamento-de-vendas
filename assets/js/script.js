@@ -11,6 +11,7 @@ const tabelas = document.querySelector('.tabelas');
 const img = document.querySelector('.fa-camera');
 
 
+
 /*Feito um objetos com os produtos */
 const produto1 = {
     codigo: 123,
@@ -71,21 +72,21 @@ function calculaSubtotal(valor, desc, qtda) {
     const preco = valor;
     const quant = qtda;
     const desconto = (desc / 100);
+    let tot = [];
+    console.log(tot);
 
     const calculaDesconto = preco - (preco * desconto);
-    const total = calculaDesconto * quant;
+    const total = parseInt(calculaDesconto * quant);
 
     incluirItem(calculaDesconto.toFixed(2));
     incluirItem(parseInt(quantidade.value));
     incluirItem(total.toFixed(2));
-
+    
     sub.innerHTML = total.toFixed(2);
 
-    return total;
+   return total.toFixed(2);
+    
 }
-
-/* Incluindo na lista de orçamento */
-
 
 /*Recebe os dados do formulário para depois incluir no campo de orçamento */
 let dados = [];
@@ -119,10 +120,11 @@ function criaTabela() {
 function tabelaOrcamento() {
     const td = criaTr();
     tabelas.appendChild(td);
-
     for (let i = 0; i < dados.length; i++) {
         const tab = criaTabela();
         tab.innerHTML = dados[i];
+        tab.setAttribute('class', dados[i].length);//corrigir
+        
         td.appendChild(tab);
     }
 }
@@ -135,7 +137,7 @@ function limpaFormulario(){
     preco.innerHTML = '';
     quantidade.value = '';
     desconto.value = ' ';
-    sub.innerHTML = ' ';
+    sub.innerHTML = 0;
 
 }
 
@@ -154,6 +156,8 @@ function mostraImagem(cod){
 
      img.style.display = "none";
 }
+
+/*Incluindo o valor total dos itens na tabela do orçamento */
 
 
 
@@ -176,7 +180,6 @@ botaoCalcular.addEventListener('click', function (e) {
 
     calculaSubtotal(preco.value, desconto.value, quantidade.value);
     //incluirItem(parseInt(quantidade.value));
-
 });
 
 /*Pegando o evento do botão incluir */
@@ -188,9 +191,13 @@ incluir.addEventListener('click', function (e) {
     limpaArray(); 
     limpaFormulario();
     mostraImagem();
-    img.style.display = "flex";
+     img.style.display = "flex";
+    
+    
     
 });
+
+
 
 /*Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
 quantidade.addEventListener('keypress', function(e){
@@ -202,6 +209,10 @@ quantidade.addEventListener('keypress', function(e){
 desconto.addEventListener('keypress', function(e){
     if(e.keyCode === 13) e.preventDefault();
 });
+
+
+
+
 
 
 
