@@ -192,9 +192,6 @@ incluir.addEventListener('click', function (e) {
     limpaFormulario();
     mostraImagem();
      img.style.display = "flex";
-    
-    
-    
 });
 
 
