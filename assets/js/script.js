@@ -1,3 +1,4 @@
+const formulario = document.querySelector('.container-formulario');
 const codigo = document.querySelector('.codigo');
 const botaoConsultar = document.querySelector('.botao-consultar');
 const descricao = document.querySelector('.produto');
@@ -9,7 +10,6 @@ const sub = document.querySelector('.subtotal');
 const incluir = document.querySelector('.botao-incluir');
 const tabelas = document.querySelector('.tabelas');
 const img = document.querySelector('.fa-camera');
-
 
 
 /*1- Criei um objeto produto que armazena código, produto e valor */
@@ -148,6 +148,12 @@ function limpaFormulario() {
     sub.innerHTML = '';
 }
 
+let num = 0;
+function teste(){
+    num++;
+    console.log(num);
+}
+
 /*10- Estou pegando o evento do botão de consultar item */
 botaoConsultar.addEventListener('click', function (e) {
     e.preventDefault();
@@ -168,24 +174,30 @@ botaoCalcular.addEventListener('click', function (e) {
     //incluirItem(parseInt(quantidade.value));
 });
 
-/*12- Pegando o evento do botão incluir */
+/*12- Esta função para o evento de enviar o formulário  */
+formulario.addEventListener('submit', function(e){
+    e.addEventListener();
+});
+
+/*13- Pegando o evento do botão incluir */
 incluir.addEventListener('click', function (e) {
     e.preventDefault();
 
     tabelaOrcamento();
+    teste();
     limpaArray();
     limpaFormulario();
     mostraImagem();
     img.style.display = "flex";
 });
 
-/*13- Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
+/*14- Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
 quantidade.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault();
     desconto.focus();
 });
 
-/*14- Estou parando o evendo do enter no campo desconto */
+/*15- Estou parando o evendo do enter no campo desconto */
 desconto.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault();
 });
