@@ -10,6 +10,7 @@ const sub = document.querySelector('.subtotal');
 const incluir = document.querySelector('.botao-incluir');
 const tabelas = document.querySelector('.tabelas');
 const img = document.querySelector('.fa-camera');
+const valorTotal = document.querySelector('.valor-total-pedido');
 
 
 /*1- Criei um objeto produto que armazena código, produto e valor */
@@ -148,13 +149,25 @@ function limpaFormulario() {
     sub.innerHTML = '';
 }
 
-let num = 0;
-function teste(){
-    num++;
-    console.log(num);
+/*10- faz a soma da venda dos itens para coloca-los no total do pedido */
+let total = 0;
+
+/*11- Esta função pega o valor do total e soma mais o valor da venda, para fazer o total do pedido*/
+function totalPedido(valor){
+    total += Number(valor);
 }
 
-/*10- Estou pegando o evento do botão de consultar item */
+/*12- faz a inclução do valor total no campo de orçamento */
+function totalPedidoFinal(){
+    valorTotal.innerHTML = total.toFixed(2);
+}
+
+/*14- Esta função para o evento de enviar o formulário  */
+formulario.addEventListener('submit', function(e){
+    e.addEventListener();
+});
+
+/*12- Estou pegando o evento do botão de consultar item */
 botaoConsultar.addEventListener('click', function (e) {
     e.preventDefault();
     if (!codigo.value) return;
@@ -165,7 +178,7 @@ botaoConsultar.addEventListener('click', function (e) {
 
 });
 
-/*11- Pegando o evento do botão calcular */
+/*13- Pegando o evento do botão calcular */
 botaoCalcular.addEventListener('click', function (e) {
     e.preventDefault();
     if (!quantidade.value || !desconto.value) return alert("Prencher quantidade e desconto!") ;
@@ -174,30 +187,26 @@ botaoCalcular.addEventListener('click', function (e) {
     //incluirItem(parseInt(quantidade.value));
 });
 
-/*12- Esta função para o evento de enviar o formulário  */
-formulario.addEventListener('submit', function(e){
-    e.addEventListener();
-});
-
-/*13- Pegando o evento do botão incluir */
+/*15- Pegando o evento do botão incluir */
 incluir.addEventListener('click', function (e) {
     e.preventDefault();
 
     tabelaOrcamento();
-    teste();
+    totalPedido(dados[4]);
+    totalPedidoFinal();
     limpaArray();
     limpaFormulario();
     mostraImagem();
     img.style.display = "flex";
 });
 
-/*14- Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
+/*16- Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
 quantidade.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault();
     desconto.focus();
 });
 
-/*15- Estou parando o evendo do enter no campo desconto */
+/*17- Estou parando o evendo do enter no campo desconto */
 desconto.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault();
 });

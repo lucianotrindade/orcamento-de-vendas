@@ -271,10 +271,13 @@ table{
     justify-content: flex-end;
     align-items: flex-end;
     margin-right: 16%;
-    margin-top: 5px;
-   
+    margin-top: 10px;
 }
 
 .total{
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+.valor-total-pedido{
+    font-size: 1.5em;
 }
