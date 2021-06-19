@@ -11,6 +11,8 @@ const incluir = document.querySelector('.botao-incluir');
 const tabelas = document.querySelector('.tabelas');
 const img = document.querySelector('.fa-camera');
 const valorTotal = document.querySelector('.valor-total-pedido');
+const icone = document.querySelector('.fa-trash-alt');
+const td = document.querySelector('td');
 
 
 /*1- Criei um objeto produto que armazena código, produto e valor */
@@ -54,10 +56,11 @@ function incluiProduto(cod) {
         preco.innerText = produto1.produto3.valor;
         focaQuantidade();
     } else {
-        alert('Produto não encontrado!');
-        descricao.innerText = ' ';
-        preco.innerHTML = ' ';
+      alert('Produto não encontrado!'); 
+       descricao.innerText = '';
+       preco.innerHTML = '';
     }
+   
 }
 
 /*3-Essa função após consultar o produto ela deixa o ponteiro do mouse no campo de quantidade, Assim mostra ao usuário qual é o próximo campo a ser preenchido */
@@ -77,6 +80,8 @@ function calculaSubtotal(valor, desc, qtda) {
     incluirItem(calculaDesconto.toFixed(2));
     incluirItem(parseInt(quantidade.value));
     incluirItem(total.toFixed(2));
+
+    
 
     sub.innerHTML = total.toFixed(2);
 
@@ -125,17 +130,24 @@ function criaTabela() {
     return td;
 }
 
+/*Esta função cria um icone dentra da tabela de orçamento */
+function criaIcone() {
+    const i = '<i class="far fa-trash-alt"></i>';
+    return i;
+}
 
 /*8- Esta função vai pegar a informação que esta no array dados e vai coloca-los em forma de tabela na parte do orçamento.*/
 
 function tabelaOrcamento() {
     const td = criaTr();
     tabelas.appendChild(td);
+    
     for (let i = 0; i < dados.length; i++) {
         const tab = criaTabela();
         tab.innerHTML = dados[i];
         td.appendChild(tab);
     }
+   
 }
 
 /*9- Limpa o formulário após a inclusão do item na tabela de orçamento */
@@ -185,6 +197,7 @@ botaoCalcular.addEventListener('click', function (e) {
 
     calculaSubtotal(preco.value, desconto.value, quantidade.value);
     //incluirItem(parseInt(quantidade.value));
+    incluirItem(criaIcone());
 });
 
 /*15- Pegando o evento do botão incluir */
@@ -200,6 +213,7 @@ incluir.addEventListener('click', function (e) {
     img.style.display = "flex";
 });
 
+
 /*16- Parando o evento da tecla enter e quando precionada foca no campo desconto.*/
 quantidade.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault();
@@ -211,6 +225,14 @@ desconto.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault();
 });
 
+/*document.addEventListener('click', function(e){
+    const elemento = e.target;
+
+    if(elemento.classList.contains('fa-trash-alt')) {
+        console.log("ok");
+        td.remove();
+    }
+});*/
 
 
 
