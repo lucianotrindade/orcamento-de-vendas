@@ -146,7 +146,7 @@ function tabelaOrcamento() {
     for (let i = 0; i < dados.length; i++) {
         const tab = criaTabela();
         tab.innerHTML = dados[i];
-        tab.setAttribute('class', 'lista');
+        tab.setAttribute('class', 'lista' );
         td.appendChild(tab);
     }
    
