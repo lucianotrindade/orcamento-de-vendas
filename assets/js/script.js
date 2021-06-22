@@ -12,7 +12,7 @@ const tabelas = document.querySelector('.tabelas');
 const img = document.querySelector('.fa-camera');
 const valorTotal = document.querySelector('.valor-total-pedido');
 const icone = document.querySelector('.fa-trash-alt');
-const td = document.querySelector('td');
+const td = document.querySelector('.lista');
 
 
 /*1- Criei um objeto produto que armazena código, produto e valor */
@@ -140,11 +140,13 @@ function criaIcone() {
 
 function tabelaOrcamento() {
     const td = criaTr();
+    td.setAttribute('class','lista')
     tabelas.appendChild(td);
     
     for (let i = 0; i < dados.length; i++) {
         const tab = criaTabela();
         tab.innerHTML = dados[i];
+        tab.setAttribute('class', 'lista');
         td.appendChild(tab);
     }
    
@@ -161,6 +163,10 @@ function limpaFormulario() {
     sub.innerHTML = '';
 }
 
+function somarTotal(){
+    
+}
+
 /*10- faz a soma da venda dos itens para coloca-los no total do pedido */
 let total = 0;
 
@@ -169,14 +175,26 @@ function totalPedido(valor){
     total += Number(valor);
 }
 
+function totalPedidoSubtracao(valor){
+    total -= Number(valor);
+}
+
 /*12- faz a inclução do valor total no campo de orçamento */
 function totalPedidoFinal(){
     valorTotal.innerHTML = total.toFixed(2);
 }
 
+/*Função que exclui um item da lista de orçamento. */
+function removeItem(){
+    const tr = document.querySelector('.lista');
+    tr.remove();
+   
+    console.log(td);
+}
+
 /*14- Esta função para o evento de enviar o formulário  */
 formulario.addEventListener('submit', function(e){
-    e.addEventListener();
+    e.preventDefault();
 });
 
 /*12- Estou pegando o evento do botão de consultar item */
@@ -225,14 +243,13 @@ desconto.addEventListener('keypress', function (e) {
     if (e.keyCode === 13) e.preventDefault();
 });
 
-/*document.addEventListener('click', function(e){
-    const elemento = e.target;
 
+document.addEventListener('click', function(e){
+    const elemento = e.target;
     if(elemento.classList.contains('fa-trash-alt')) {
-        console.log("ok");
-        td.remove();
+    removeItem();
     }
-});*/
+});
 
 
 
