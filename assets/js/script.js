@@ -162,7 +162,7 @@ function limpaFormulario() {
     preco.value = '';
     quantidade.value = '';
     desconto.value = '';
-    sub.innerHTML = '';
+    sub.value = '';
 }
 
 /*10- faz a soma da venda dos itens para coloca-los no total do pedido */
