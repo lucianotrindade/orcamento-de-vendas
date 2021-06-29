@@ -38,22 +38,22 @@ function incluiProduto(cod) {
     if (!valor) alert('O campo código aceita somente números'); // Impede a entrada de String.
 
     if (valor == 123) {
-        descricao.innerText = produto1.produto;
-        preco.innerText = produto1.valor;
+        descricao.value += produto1.produto;
+        preco.value = produto1.valor;
         incluirItem(produto1.produto);
         quantidade.value = '';
         focaQuantidade();
     } else if (valor == 456) {
-        descricao.innerText = produto1.produto2.produto;
+        descricao.value = produto1.produto2.produto;
         incluirItem(produto1.produto2.produto);
         //incluirItem(produto1.produto2.valor);
-        preco.innerHTML = produto1.produto2.valor;
+        preco.value = produto1.produto2.valor;
         focaQuantidade();
     } else if (valor == 789) {
-        descricao.innerText = produto1.produto3.produto;
+        descricao.value = produto1.produto3.produto;
         incluirItem(produto1.produto3.produto);
         //incluirItem(produto1.produto3.valor);
-        preco.innerText = produto1.produto3.valor;
+        preco.value = produto1.produto3.valor;
         focaQuantidade();
     } else {
       alert('Produto não encontrado!'); 
@@ -83,7 +83,7 @@ function calculaSubtotal(valor, desc, qtda) {
 
     
 
-    sub.innerHTML = total.toFixed(2);
+    sub.value = total.toFixed(2);
 
     return total.toFixed(2);
 }
@@ -158,8 +158,8 @@ function tabelaOrcamento() {
 function limpaFormulario() {
     codigo.value = '';
     codigo.focus();
-    descricao.innerHTML = '';
-    preco.innerHTML = '';
+    descricao.value = '';
+    preco.value = '';
     quantidade.value = '';
     desconto.value = '';
     sub.innerHTML = '';
